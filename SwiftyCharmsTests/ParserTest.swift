@@ -12,6 +12,8 @@ import Nimble
 
 
 class JSONParserSpecs:QuickSpec {
+
+
     override func spec() {
 
         describe("number"){
@@ -117,6 +119,21 @@ class JSONParserSpecs:QuickSpec {
                 expect(bool).to(failOn(""))
             }
 
+        }
+
+        describe("JSON parser") {
+
+            let jsonParser = makeJSON()
+            let bundle = NSBundle(forClass: self.dynamicType)
+            let path = bundle.pathForResource("example", ofType: "json")!
+            let jsonData = NSData(contentsOfFile: path)!
+            let jsonObject = try! NSJSONSerialization.JSONObjectWithData(jsonData, options: []) as! NSDictionary
+            let jsonString = String(data: jsonData, encoding: NSUTF8StringEncoding)!
+            let jsonTest = try! jsonParser.trunk(jsonString).0.toNSObject() as! NSDictionary
+            
+            it("should parse json value from string") {
+                expect(jsonTest).to(equal(jsonObject))
+            }
         }
     }
 }

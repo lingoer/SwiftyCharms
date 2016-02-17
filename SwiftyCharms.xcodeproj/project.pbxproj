@@ -19,6 +19,7 @@
 		17B6045B1C72CFA000F056AE /* ParserExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6045A1C72CFA000F056AE /* ParserExamples.swift */; };
 		17B6045D1C72F9C100F056AE /* ParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6045C1C72F9C100F056AE /* ParserTest.swift */; };
 		17B6045F1C74542800F056AE /* CustomMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6045E1C74542800F056AE /* CustomMatchers.swift */; };
+		17B604611C74770500F056AE /* example.json in Resources */ = {isa = PBXBuildFile; fileRef = 17B604601C74770500F056AE /* example.json */; };
 		D229D16ACA21364942776ABF /* Pods_SwiftyCharmsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8635F4985A8C707EA624FC /* Pods_SwiftyCharmsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		17B6045A1C72CFA000F056AE /* ParserExamples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserExamples.swift; sourceTree = "<group>"; };
 		17B6045C1C72F9C100F056AE /* ParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserTest.swift; sourceTree = "<group>"; };
 		17B6045E1C74542800F056AE /* CustomMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMatchers.swift; sourceTree = "<group>"; };
+		17B604601C74770500F056AE /* example.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example.json; sourceTree = "<group>"; };
 		6A8295A2125E23AD1115240F /* Pods-SwiftyCharmsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyCharmsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyCharmsTests/Pods-SwiftyCharmsTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E8635F4985A8C707EA624FC /* Pods_SwiftyCharmsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyCharmsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26A3400365D7FFD41832262 /* Pods-SwiftyCharmsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyCharmsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyCharmsTests/Pods-SwiftyCharmsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				1745C3631C72CCF80035A6D2 /* Info.plist */,
 				17B6045C1C72F9C100F056AE /* ParserTest.swift */,
 				17B6045E1C74542800F056AE /* CustomMatchers.swift */,
+				17B604601C74770500F056AE /* example.json */,
 			);
 			path = SwiftyCharmsTests;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17B604611C74770500F056AE /* example.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
