@@ -1,13 +1,16 @@
 PODS:
   - Nimble (3.1.0)
   - Quick (0.9.1)
+  - SwiftCheck (0.4.1)
 
 DEPENDENCIES:
   - Nimble
   - Quick
+  - SwiftCheck
 
 SPEC CHECKSUMS:
   Nimble: 79d40f4d69d47314229bbabacaa02b8838c779b9
   Quick: a5221fc21788b6aeda934805e68b061839bc3165
+  SwiftCheck: fed0bf110883a083c1b6fdfff2fc5cd9bbe13c9c
 
 COCOAPODS: 0.39.0
