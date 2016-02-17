@@ -48,7 +48,10 @@ class JSONParserSpecs:QuickSpec {
             it("should fail on empty input") {
                 expect(string).to(failOn(""))
             }
-
+            
+            it("should fail on missing closing quote") {
+                expect(string).to(failOn("\"abc"))
+            }
         }
 
         describe("array") {
