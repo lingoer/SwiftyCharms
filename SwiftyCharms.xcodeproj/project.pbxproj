@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1745C3561C72CCF80035A6D2 /* SwiftyCharms.h in Headers */ = {isa = PBXBuildFile; fileRef = 1745C3551C72CCF80035A6D2 /* SwiftyCharms.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1745C35D1C72CCF80035A6D2 /* SwiftyCharms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1745C3521C72CCF80035A6D2 /* SwiftyCharms.framework */; };
-		1745C3621C72CCF80035A6D2 /* SwiftyCharmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1745C3611C72CCF80035A6D2 /* SwiftyCharmsTests.swift */; };
 		17B604531C72CEEE00F056AE /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6044C1C72CEEE00F056AE /* Async.swift */; };
 		17B604541C72CEEE00F056AE /* AsyncCharms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6044D1C72CEEE00F056AE /* AsyncCharms.swift */; };
 		17B604551C72CEEE00F056AE /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6044E1C72CEEE00F056AE /* Parser.swift */; };
@@ -19,6 +18,8 @@
 		17B604591C72CEEE00F056AE /* Runes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B604521C72CEEE00F056AE /* Runes.swift */; };
 		17B6045B1C72CFA000F056AE /* ParserExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6045A1C72CFA000F056AE /* ParserExamples.swift */; };
 		17B6045D1C72F9C100F056AE /* ParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6045C1C72F9C100F056AE /* ParserTest.swift */; };
+		17B6045F1C74542800F056AE /* CustomMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6045E1C74542800F056AE /* CustomMatchers.swift */; };
+		D229D16ACA21364942776ABF /* Pods_SwiftyCharmsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8635F4985A8C707EA624FC /* Pods_SwiftyCharmsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 		1745C3551C72CCF80035A6D2 /* SwiftyCharms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyCharms.h; sourceTree = "<group>"; };
 		1745C3571C72CCF80035A6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1745C35C1C72CCF80035A6D2 /* SwiftyCharmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyCharmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1745C3611C72CCF80035A6D2 /* SwiftyCharmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyCharmsTests.swift; sourceTree = "<group>"; };
 		1745C3631C72CCF80035A6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17B6044C1C72CEEE00F056AE /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		17B6044D1C72CEEE00F056AE /* AsyncCharms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncCharms.swift; sourceTree = "<group>"; };
@@ -47,6 +47,10 @@
 		17B604521C72CEEE00F056AE /* Runes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runes.swift; sourceTree = "<group>"; };
 		17B6045A1C72CFA000F056AE /* ParserExamples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserExamples.swift; sourceTree = "<group>"; };
 		17B6045C1C72F9C100F056AE /* ParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserTest.swift; sourceTree = "<group>"; };
+		17B6045E1C74542800F056AE /* CustomMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMatchers.swift; sourceTree = "<group>"; };
+		6A8295A2125E23AD1115240F /* Pods-SwiftyCharmsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyCharmsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyCharmsTests/Pods-SwiftyCharmsTests.release.xcconfig"; sourceTree = "<group>"; };
+		6E8635F4985A8C707EA624FC /* Pods_SwiftyCharmsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyCharmsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26A3400365D7FFD41832262 /* Pods-SwiftyCharmsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyCharmsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyCharmsTests/Pods-SwiftyCharmsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1745C35D1C72CCF80035A6D2 /* SwiftyCharms.framework in Frameworks */,
+				D229D16ACA21364942776ABF /* Pods_SwiftyCharmsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +80,8 @@
 				1745C3541C72CCF80035A6D2 /* SwiftyCharms */,
 				1745C3601C72CCF80035A6D2 /* SwiftyCharmsTests */,
 				1745C3531C72CCF80035A6D2 /* Products */,
+				AAEBFEF8C3D1D0CE743C5C20 /* Pods */,
+				CCD308C175948D8FCFCFDB3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +107,9 @@
 		1745C3601C72CCF80035A6D2 /* SwiftyCharmsTests */ = {
 			isa = PBXGroup;
 			children = (
-				1745C3611C72CCF80035A6D2 /* SwiftyCharmsTests.swift */,
 				1745C3631C72CCF80035A6D2 /* Info.plist */,
 				17B6045C1C72F9C100F056AE /* ParserTest.swift */,
+				17B6045E1C74542800F056AE /* CustomMatchers.swift */,
 			);
 			path = SwiftyCharmsTests;
 			sourceTree = "<group>";
@@ -119,6 +126,23 @@
 				17B604521C72CEEE00F056AE /* Runes.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		AAEBFEF8C3D1D0CE743C5C20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E26A3400365D7FFD41832262 /* Pods-SwiftyCharmsTests.debug.xcconfig */,
+				6A8295A2125E23AD1115240F /* Pods-SwiftyCharmsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CCD308C175948D8FCFCFDB3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E8635F4985A8C707EA624FC /* Pods_SwiftyCharmsTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1745C3691C72CCF80035A6D2 /* Build configuration list for PBXNativeTarget "SwiftyCharmsTests" */;
 			buildPhases = (
+				7A687054AFAD32EF02A36A89 /* Check Pods Manifest.lock */,
 				1745C3581C72CCF80035A6D2 /* Sources */,
 				1745C3591C72CCF80035A6D2 /* Frameworks */,
 				1745C35A1C72CCF80035A6D2 /* Resources */,
+				232F7440193B6E21686AA592 /* Embed Pods Frameworks */,
+				C770C3461C67ADE6FB89C2ED /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,6 +253,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		232F7440193B6E21686AA592 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyCharmsTests/Pods-SwiftyCharmsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A687054AFAD32EF02A36A89 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C770C3461C67ADE6FB89C2ED /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftyCharmsTests/Pods-SwiftyCharmsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1745C34D1C72CCF80035A6D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -246,8 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17B6045F1C74542800F056AE /* CustomMatchers.swift in Sources */,
 				17B6045D1C72F9C100F056AE /* ParserTest.swift in Sources */,
-				1745C3621C72CCF80035A6D2 /* SwiftyCharmsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +463,7 @@
 		};
 		1745C36A1C72CCF80035A6D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E26A3400365D7FFD41832262 /* Pods-SwiftyCharmsTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SwiftyCharmsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -398,6 +474,7 @@
 		};
 		1745C36B1C72CCF80035A6D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A8295A2125E23AD1115240F /* Pods-SwiftyCharmsTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SwiftyCharmsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

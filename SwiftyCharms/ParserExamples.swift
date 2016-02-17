@@ -24,11 +24,11 @@ func makeNumber(digits:[String]) throws-> Double{
     throw ParserError.NotMatch
 }
 
-let noneQuote = {$0.reduce("",combine:+)} <^> many(not(one("\"")))
+let noneQuote = {$0.reduce("",combine:+)} <^> many(({_ in "\""} <^> one("\\\"")) <|> not(one("\"")))
 
 let number = makeNumber <^> many(digit)
 
-let string = one("\"") *> (noneQuote <|> one("\\\"")) <* one("\"")
+let string = one("\"") *> noneQuote <* one("\"")
 
 let array = one("[") *> many(makeJSON(), sepBy: one(",")) <* one("]")
 
