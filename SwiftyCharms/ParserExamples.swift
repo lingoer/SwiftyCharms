@@ -34,7 +34,7 @@ let array = one("[") *> many(makeJSON(), sepBy: one(",")) <* one("]")
 
 let kvpair = {x in {y in (x,y)}} <^> string <* one(":") <*> makeJSON()
 
-let objects = many(kvpair, sepBy: one(","))
+let objects = one("{") *> many(kvpair, sepBy: one(",")) <* one("}")
 
 let bool = ({_ in true} <^> one("true")) <|> ({_ in false} <^> one("false"))
 
