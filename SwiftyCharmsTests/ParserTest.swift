@@ -21,7 +21,16 @@ class JSONParserSpecs:QuickSpec {
             it("should parse float value from string") {
                 expect(number).to(parse((123.01,"abc"), from: "123.01abc"))
             }
-
+            
+            it("should be able to parse number e expression") {
+                expect(number).to(parse((1e+2, "abc"), from: "1e+2abc"))
+            }
+            
+            it("should fail on illegal number expression") {
+                expect(number).to(failOn("123-123"))
+                expect(number).to(failOn("E-5"))
+            }
+            
             it("should fail on none float expression") {
                 expect(number).to(failOn("a123"))
             }
