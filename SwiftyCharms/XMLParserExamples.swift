@@ -6,12 +6,6 @@
 //  Copyright © 2016 Ruoyu Fu. All rights reserved.
 //
 
-//Example
-let input = "<hello name=\"SwiftyCharms\">world</hello>"
-
-//Seems like there are memory issue at the moment
-let input2 = "<hello name=\"SwiftyCharms\"><time name=\"SwiftyCharms\">hello</time></hello>"
-
 struct XML {
     enum Content {
         case Text(String)
