@@ -50,7 +50,7 @@ func assemble<T>(keyValuePair:[(String,T)]) -> [String:T] {
 let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".characters
     .map({one(String($0))})
 
-let keyparser = join <^> some(oneOf(letters))
+let keyparser = join <^> many(oneOf(letters))
 
 let attribute = one(" ") *> keyparser <* one("=")
 let attributeValue = tuple <^> attribute <*> string
