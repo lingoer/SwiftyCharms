@@ -21,5 +21,14 @@ class XMLParserTest: QuickSpec {
                 expect(result.name).to(equal("hello"))
             }
         }
+        describe("Nested Node") {
+            it("Should be able to parse nested nodes") {
+                let test = "<hello name=\"SwiftyCharms\"><time name=\"SwiftyCharms\">hello</time></hello>"
+                guard let result = nodeParser().parse(test).value else {
+                    return fail()
+                }
+                expect(result.name).to(equal("hello"))
+            }
+        }
     }
 }

@@ -73,12 +73,11 @@ func oneOf<T> (parsers:[Parser<T>]) -> Parser<T> {
 }
 
 func some<T> (parser:Parser<T>) -> Parser<[T]> {
-    return (parser >>- {x in {[x] + $0} <^> some(parser)})
+    return (parser >>- {x in {[x] + $0} <^> many(parser)})
 }
 
-
 func many<T> (parser:Parser<T>) -> Parser<[T]> {
-    return (parser >>- {x in {[x] + $0} <^> many(parser)}) <|> .unit([])
+    return some(parser) <|> .unit([])
 }
 
 func many<T, U> (parser:Parser<T>, sepBy:Parser<U>) -> Parser<[T]> {
