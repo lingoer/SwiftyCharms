@@ -45,8 +45,9 @@ func makeNumber(digits:[String]) throws-> Double{
     throw ParserError.NotMatch
 }
 
+let whitespace = many(oneOf(" \t\n\r".characters.map{one(String($0))})) <|> .unit([])
+
 func trim<T>(parser:Parser<T>)->Parser<T>{
-    let whitespace = many(oneOf(" \t\n\r".characters.map{one(String($0))})) <|> .unit([])
     return whitespace *> parser <* whitespace
 }
 

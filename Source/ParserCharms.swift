@@ -72,6 +72,11 @@ func oneOf<T> (parsers:[Parser<T>]) -> Parser<T> {
     return parsers.reduce(fail(), combine: <|>)
 }
 
+func some<T> (parser:Parser<T>) -> Parser<[T]> {
+    return (parser >>- {x in {[x] + $0} <^> some(parser)})
+}
+
+
 func many<T> (parser:Parser<T>) -> Parser<[T]> {
     return (parser >>- {x in {[x] + $0} <^> many(parser)}) <|> .unit([])
 }
