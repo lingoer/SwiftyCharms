@@ -64,6 +64,9 @@ let content = nodeContent <|> textContent
 let footer = one("</") *> keyparser <* one(">")
 
 func nodeParser() -> Parser<XML> {
-    return {XML.from <^> header <*> attri <*> content <*> footer}()
+    return Parser {
+        let p = XML.from <^> header <*> attri <*> content <*> footer
+        return try p.trunk($0)
+    }
 }
 

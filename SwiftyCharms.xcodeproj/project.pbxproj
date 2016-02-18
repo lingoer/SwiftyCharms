@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		045EF3841C75DC3A004D898A /* XMLParserExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045EF3831C75DC3A004D898A /* XMLParserExamples.swift */; };
+		045EF3881C75FE82004D898A /* XMLParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045EF3871C75FE82004D898A /* XMLParserTest.swift */; };
 		1745C3561C72CCF80035A6D2 /* SwiftyCharms.h in Headers */ = {isa = PBXBuildFile; fileRef = 1745C3551C72CCF80035A6D2 /* SwiftyCharms.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1745C35D1C72CCF80035A6D2 /* SwiftyCharms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1745C3521C72CCF80035A6D2 /* SwiftyCharms.framework */; };
 		17B604531C72CEEE00F056AE /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B6044C1C72CEEE00F056AE /* Async.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		045EF3831C75DC3A004D898A /* XMLParserExamples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParserExamples.swift; sourceTree = "<group>"; };
+		045EF3871C75FE82004D898A /* XMLParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParserTest.swift; sourceTree = "<group>"; };
 		1745C3521C72CCF80035A6D2 /* SwiftyCharms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyCharms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1745C3551C72CCF80035A6D2 /* SwiftyCharms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyCharms.h; sourceTree = "<group>"; };
 		1745C3571C72CCF80035A6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		1745C3601C72CCF80035A6D2 /* SwiftyCharmsTests */ = {
 			isa = PBXGroup;
 			children = (
+				045EF3871C75FE82004D898A /* XMLParserTest.swift */,
 				1745C3631C72CCF80035A6D2 /* Info.plist */,
 				17B6045C1C72F9C100F056AE /* JSONParserTest.swift */,
 				17B6045E1C74542800F056AE /* CustomMatchers.swift */,
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045EF3881C75FE82004D898A /* XMLParserTest.swift in Sources */,
 				17B6045F1C74542800F056AE /* CustomMatchers.swift in Sources */,
 				17B6045D1C72F9C100F056AE /* JSONParserTest.swift in Sources */,
 			);

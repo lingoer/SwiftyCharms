@@ -22,3 +22,12 @@ func <^> <T, U> (f: T throws-> U, r: Result<T>) -> Result<U> {
 func <*> <T, U> (rf: Result<T throws-> U>, r:Result<T>) -> Result<U> {
     return r.apply(rf)
 }
+
+extension Result {
+    var value:T? {
+        if case .Success(let v) = self {
+            return v
+        }
+        return nil
+    }
+}
