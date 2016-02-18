@@ -9,6 +9,27 @@
 import Nimble
 @testable import SwiftyCharms
 
+extension JSON{
+    
+    func toNSObject()->NSObject{
+        switch self{
+        case .JNull:
+            return NSNull()
+        case .JBool(let b):
+            return b
+        case .JNumber(let n):
+            return n
+        case .JString(let s):
+            return s
+        case .JArray(let jsonArray):
+            return jsonArray.map{$0.toNSObject()}
+        case .JObject(let jsonObject):
+            return NSDictionary(objects: jsonObject.map{$0.1.toNSObject()}, forKeys: jsonObject.map{$0.0})
+        }
+    }
+
+}
+
 func parse<T:Equatable>(result:(T, String), from:String)->MatcherFunc<Parser<T>>{
     return MatcherFunc{ expression, failureMessage in
         let parser = try expression.evaluate()
