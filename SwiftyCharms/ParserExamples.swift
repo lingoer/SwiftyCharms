@@ -7,6 +7,7 @@
 //
 
 enum JSON{
+    
     case JString(String)
     case JNumber(Double)
     case JBool(Bool)
@@ -14,26 +15,6 @@ enum JSON{
     case JObject([(String,JSON)])
     case JNull
 
-    func toNSObject()->NSObject{
-        switch self{
-        case .JNull:
-            return NSNull()
-        case .JBool(let b):
-            return b
-        case .JNumber(let n):
-            return n
-        case .JString(let s):
-            return s
-        case .JArray(let jsonArray):
-            return jsonArray.map{$0.toNSObject()}
-        case .JObject(let jsonObject):
-            var obj:[String:NSObject] = [:]
-            jsonObject.forEach{
-                obj[$0.0] = $0.1.toNSObject()
-            }
-            return obj
-        }
-    }
 }
 
 let digit = oneOf("0123456789+-.eE".characters.map{one(String($0))})
