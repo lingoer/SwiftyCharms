@@ -14,20 +14,32 @@ class XMLParserTest: QuickSpec {
     override func spec() {
         describe("Simple Node") {
             it("Should be able to parse simple node") {
-                let test = "<hello name=\"SwiftyCharms\">world</hello>"
+                let test = "<hello attr=\"SwiftyCharms\">world</hello>"
                 guard let result = nodeParser().parse(test).value else {
-                    return fail()
+                    return fail("Cannot parse simple node")
                 }
                 expect(result.name).to(equal("hello"))
+                expect(result.attributes["attr"]).to(equal("SwiftyCharms"))
+                if case .Text(let t) = result.childern {
+                    expect(t).to(equal("world"))
+                } else {
+                    fail("Cannot parse content text")
+                }
             }
         }
         describe("Nested Node") {
             it("Should be able to parse nested nodes") {
-                let test = "<hello name=\"SwiftyCharms\"><time name=\"SwiftyCharms\">hello</time></hello>"
+                let test = "<hello attr=\"SwiftyCharms\"><time name=\"SwiftyCharms\">hello</time></hello>"
                 guard let result = nodeParser().parse(test).value else {
                     return fail()
                 }
                 expect(result.name).to(equal("hello"))
+                expect(result.attributes["attr"]).to(equal("SwiftyCharms"))
+                if case .Nodes(let nodes) = result.childern, let node = nodes.first {
+                    expect(node.name).to(equal("time"))
+                } else {
+                    fail("Cannot parse content text")
+                }
             }
         }
     }
