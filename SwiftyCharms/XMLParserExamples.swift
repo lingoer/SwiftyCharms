@@ -17,11 +17,8 @@ struct XML {
 }
 
 extension XML {
-    static func from(head:String)(_ attributes:[String:String])(_ childern:Content)(_ foot:String) throws -> XML {
-        guard head == foot else {
-            throw ParserError.NotMatch
-        }
-        return XML(name: head, attributes: attributes, childern: childern)
+    static func from(name:String)(_ attributes:[String:String])(_ childern:Content) throws -> XML {
+        return XML(name: name, attributes: attributes, childern: childern)
     }
 }
 
@@ -59,15 +56,22 @@ let footer = one("</") *> keyparser <* one(">")
 
 let selfClosingFooter = whitespace *> one("/>")
 
-let standardNodeParser = XML.from <^> header <*> attri <*> content <*> footer
-func fromSelfClosing(header:String)(_ attributes:[String:String]) throws -> XML {
-    return try XML.from(header)(attributes)(XML.Content.Text(""))(header)
+let headerParser = XML.from <^> header <*> attri <*> content
+
+func checkFooter(xml:XML)(footer:String) throws -> XML {
+    if xml.name != footer {
+        throw ParserError.NotMatch
+    }
+    return xml
 }
-let selfClosingNodeParser = fromSelfClosing <^> header <*> attributes <* selfClosingFooter
+
+let standParser = checkFooter <^> headerParser <*> footer
+
+let selfClosingNodeParser = XML.from <^> header <*> attributes <* selfClosingFooter <*> .unit(XML.Content.Text(""))
 
 func nodeParser() -> Parser<XML> {
     return Parser {
-        return try (standardNodeParser <|> selfClosingNodeParser).trunk($0)
+        return try (standParser <|> selfClosingNodeParser).trunk($0)
     }
 }
 
