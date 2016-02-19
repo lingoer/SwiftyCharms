@@ -42,5 +42,20 @@ class XMLParserTest: QuickSpec {
                 }
             }
         }
+        describe("Self closing Node") {
+            it("Should be able to parse self closing tag") {
+                let test = "<hello attr=\"SwiftyCharms\" />"
+                guard let result = nodeParser().parse(test).value else {
+                    return fail()
+                }
+                expect(result.name).to(equal("hello"))
+                expect(result.attributes["attr"]).to(equal("SwiftyCharms"))
+                if case .Text(let text) = result.childern {
+                    expect(text).to(equal(""))
+                } else {
+                    fail("Cannot parse content text")
+                }
+            }
+        }
     }
 }
