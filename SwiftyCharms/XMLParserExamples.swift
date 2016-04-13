@@ -6,6 +6,8 @@
 //  Copyright © 2016 Ruoyu Fu. All rights reserved.
 //
 
+import Curry
+
 struct XML {
     enum Content {
         case Text(String)
@@ -16,18 +18,12 @@ struct XML {
     let childern:Content
 }
 
-extension XML {
-    static func from(name:String)(_ attributes:[String:String])(_ childern:Content) throws -> XML {
-        return XML(name: name, attributes: attributes, childern: childern)
-    }
-}
-
 func join(array:[String]) -> String {
     return array.reduce("", combine: +)
 }
 
-func tuple<U, V>(x:U)(_ y:V) -> (U, V) {
-    return (x, y)
+func tuple<U, V>(u:U) -> V -> (U, V) {
+    return { v in (u, v) }
 }
 
 func assemble<T>(keyValuePair:[(String,T)]) -> [String:T] {
@@ -56,18 +52,20 @@ let footer = one("</") *> keyparser <* one(">")
 
 let selfClosingFooter = whitespace *> one("/>")
 
-let headerParser = XML.from <^> header <*> attri <*> content
+let headerParser = curry(XML.init) <^> header <*> attri <*> content
 
-func checkFooter(xml:XML)(footer:String) throws -> XML {
-    if xml.name != footer {
-        throw ParserError.NotMatch
+func checkFooter(xml:XML) -> String throws -> XML {
+    return { footer in
+        if xml.name != footer {
+            throw ParserError.NotMatch
+        }
+        return xml
     }
-    return xml
 }
 
 let standParser = checkFooter <^> headerParser <*> footer
 
-let selfClosingNodeParser = XML.from <^> header <*> attributes <* selfClosingFooter <*> .unit(XML.Content.Text(""))
+let selfClosingNodeParser = curry(XML.init) <^> header <*> attributes <* selfClosingFooter <*> .unit(XML.Content.Text(""))
 
 func nodeParser() -> Parser<XML> {
     return Parser {

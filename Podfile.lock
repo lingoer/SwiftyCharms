@@ -1,14 +1,17 @@
 PODS:
+  - Curry (2.2.0)
   - Nimble (4.0.0)
   - Quick (0.9.2)
   - SwiftCheck (0.6.0)
 
 DEPENDENCIES:
+  - Curry
   - Nimble
   - Quick
   - SwiftCheck
 
 SPEC CHECKSUMS:
+  Curry: c22d80fff7f5a4b1bbd531455c3e2dbb099658a3
   Nimble: 72bcc3e2f02242e6bfaaf8d9412ca7bfe3d8b417
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
   SwiftCheck: efa887703e9e77969ede970e335a6498c07f68d6
