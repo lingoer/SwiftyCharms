@@ -29,3 +29,6 @@ http://blog.fogcreek.com/fparsec/
 https://wiki.haskell.org/Parsec
 
 这个链接只是个目录，其中涵盖了你所需要知道的，关于这个Topic的一切。
+
+最后的最后，关于动态性，这里只是一个思路：
+https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours
