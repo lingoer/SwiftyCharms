@@ -1,8 +1,12 @@
+platform :ios, '9.0'
 use_frameworks!
 
-pod 'Curry'
+target :SwiftyCharms do
+	pod 'Curry'
+end
 
-target :SwiftyCharmsTests, :exclusive => true do
+target :SwiftyCharmsTests do
+	pod 'Curry'
     pod 'Quick'
     pod 'Nimble'
     pod 'SwiftCheck'
