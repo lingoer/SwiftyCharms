@@ -1,4 +1,3 @@
-platform :ios, '9.0'
 use_frameworks!
 
 target :SwiftyCharms do
@@ -6,7 +5,6 @@ target :SwiftyCharms do
 end
 
 target :SwiftyCharmsTests do
-	pod 'Curry'
     pod 'Quick'
     pod 'Nimble'
     pod 'SwiftCheck'
