@@ -2,7 +2,6 @@
 Some rune word for sorcerers playing dark magic
 
 ---
-For my friends in china only.
 
 下面是一些参考资料，大家可以结合着来看，相对更加容易入坑：
 
